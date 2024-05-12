@@ -91,8 +91,8 @@ buttons.forEach(button => {
                 try {
                     const result = eval(currentInput);
                     // Exibe o resultado na tela, limitando o número de dígitos
-                    if (result.toString().length > 15) {
-                        screen.textContent = "+" + (result.toString().length - 15);
+                    if (result.toString().length > 14) {
+                        screen.textContent = "+" + (result.toString().length - 14);
                     } else {
                         screen.textContent = result;
                     }
@@ -130,21 +130,21 @@ buttons.forEach(button => {
         if (isBhaskaraMode) {
             if (currentCoefficient === 'a') {
                 // Adiciona o dígito ao coeficiente A
-                if (a.length < 15) {
+                if (a.length < 14) {
                     a += pressedButton;
                     currentInput = a;
                     screen.textContent = currentInput;
                 }
             } else if (currentCoefficient === 'b') {
                 // Adiciona o dígito ao coeficiente B
-                if (b.length < 15) {
+                if (b.length < 14) {
                     b += pressedButton;
                     currentInput = b;
                     screen.textContent = currentInput;
                 }
             } else if (currentCoefficient === 'c') {
                 // Adiciona o dígito ao coeficiente C
-                if (c.length < 15) {
+                if (c.length < 14) {
                     c += pressedButton;
                     currentInput = c;
                     screen.textContent = currentInput;
@@ -152,7 +152,7 @@ buttons.forEach(button => {
             }
         } else {
             // Se a função Bhaskara não estiver ativada, permite a entrada de números independentemente
-            if (currentInput.length < 15) {
+            if (currentInput.length < 14) {
                 if (currentInput === "0") {
                     currentInput = pressedButton;
                 } else {
